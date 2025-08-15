@@ -1,0 +1,27 @@
+/* Hero Gradient Background */
+.hero-gradient {
+    background: linear-gradient(135deg, #fceff9, #e1f5fe);
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+}
+.mobile-menu a {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    color: #374151;
+    font-weight: 500;
+}
+.mobile-menu a:hover {
+    background-color: #f3f4f6;
+}
