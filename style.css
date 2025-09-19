@@ -25,3 +25,159 @@
 .mobile-menu a:hover {
     background-color: #f3f4f6;
 }
+
+
+
+/* Zoom in/out pulsing animation */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Light sweep animation */
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(300%) rotate(25deg); }
+}
+
+.pulse-button {
+  position: relative;
+  overflow: hidden;
+  animation: pulse 1.5s infinite;
+}
+
+/* Shining line */
+.shimmer-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 50px;         /* Width of shine line */
+  height: 200%;        /* Make it tall so diagonal crosses entire button */
+  background: rgba(255, 255, 255, 0.6);
+  transform: rotate(25deg);
+  filter: blur(2px);   /* Optional glow */
+  animation: shine 2s linear infinite;
+  pointer-events: none; /* Ensure button is clickable */
+}
+
+
+
+
+
+@keyframes seed-grow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(5deg);
+  }
+}
+
+.animate-seed {
+  display: inline-block;
+  animation: seed-grow 2s infinite ease-in-out;
+}
+
+
+@keyframes seed-brain {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(5deg);
+  }
+}
+
+.animate-brain {
+  display: inline-block;
+  animation: seed-grow 2s infinite ease-in-out;
+}
+
+
+@keyframes seed-heart {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(5deg);
+  }
+}
+
+.animate-heart {
+  display: inline-block;
+  animation: seed-grow 2s infinite ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+.testimonial-slider {
+  max-width: 100%;
+  overflow: hidden;
+  margin: 60px auto;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.testimonial-card {
+  flex: 0 0 auto;
+  width: 320px;
+  margin: 0 20px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
+  /* Centering content vertically & horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  min-height: 320px;
+}
+
+.testimonial-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #eee;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  color: #222;
+  font-weight: bold;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 600px) {
+  .testimonial-card {
+    width: 260px;
+  }
+}
