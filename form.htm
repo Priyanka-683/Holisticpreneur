@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+        .contact-section h2 {
+            text-align: center;
+            color: #7347cd;
+            margin-bottom: 20px;
+        }
+        .contact-section p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        input, textarea {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 15px;
+            background-color: #7347cd;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #5a36a3;
+        }
+        @media (max-width: 500px) {
+            .contact-section {
+                padding: 40px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Send us a message and we’ll get back to you as soon as possible!</p>
+
+    <!-- Formspree Form -->
+    <form action="https://formspree.io/f/mb1zrago" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+</body>
+</html>
