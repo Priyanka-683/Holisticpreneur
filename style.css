@@ -117,84 +117,74 @@
 
 
 
+/* Container */
 .testimonial-slider {
-  max-width: 100%;
   overflow: hidden;
-  margin: 60px auto;
-  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centers the carousel */
+  padding: 2rem 0;
 }
 
+/* Track for sliding cards */
 .testimonial-track {
   display: flex;
-  animation: scroll 25s linear infinite;
+  gap: 2rem;
+  animation: slide 30s linear infinite;
 }
 
+/* Each testimonial card */
 .testimonial-card {
-  flex: 0 0 auto;
-  width: 320px;
-  margin: 0 20px;
-  padding: 25px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-
-  /* Centering content vertically & horizontally */
+  flex: 0 0 300px; /* card width */
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1rem 1rem 1rem; /* extra top padding for image */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* centers image horizontally */
+  transition: transform 0.3s;
+}
 
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  min-height: 320px;
+.testimonial-card:hover {
+  transform: scale(1.05);
 }
 
 .testimonial-image {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  margin-bottom: 1rem;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #eee;
+  display: block;
 }
 
 .testimonial-text {
-  font-size: 16px;
+  font-size: 0.95rem;
   color: #555;
-  line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .testimonial-name {
-  font-size: 18px;
-  color: #222;
   font-weight: bold;
+  color: #7347cd; /* Purple accent */
 }
 
-@keyframes scroll {
+/* Slide animation */
+@keyframes slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-@media (max-width: 600px) {
-  .testimonial-card {
-    width: 260px;
-  }
-}
-
-
-
-
-
-
 
 
 
 .testimonial-card {
-  border-left: 3px solid #6B21A8;
-  border-right: 3px solid #6B21A8;
-  border-top: none;
-  border-bottom: none;
+  border-left: 2px solid #6B21A8;
+  border-right: 2px solid #6B21A8;
+  border-top: 2px solid #6B21A8;
+  border-bottom: 2px solid #6B21A8;
   padding: 20px;
   margin: 10px;
   border-radius: 10px; /* optional, if you want smoother edges */
