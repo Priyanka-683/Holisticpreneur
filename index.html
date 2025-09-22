@@ -146,6 +146,14 @@
         </div>
     </section>
 
+
+
+
+
+
+
+    
+  <div id="testimonials" class="testimonial-slider">
    <div class="testimonial-slider">
   <div class="testimonial-track">
 
@@ -259,37 +267,47 @@
 
   </div>
 </div>
+</div> 
 
 
-    <!-- Blog Section -->
-    <section id="blog" class="py-20">
-        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-6 text-purple-800">Latest Insights</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">The Power of Holistic Thinking</h3>
-                        <p class="text-gray-600">Discover how Holisticpreneur can transform your business approach.</p>
-                    </div>
+
+
+
+
+
+
+<!-- Blog Section -->
+<section id="blog" class="py-20">
+    <div class="container mx-auto px-4 text-center" 
+         data-aos="fade-up" 
+         data-aos-duration="300"> <!-- Faster animation, 300ms instead of 600ms -->
+        
+        <h2 class="text-3xl font-bold mb-6 text-purple-800">Latest Insights</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">The Power of Holistic Thinking</h3>
+                    <p class="text-gray-600">Discover how Holisticpreneur can transform your business approach.</p>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Mindset Mastery</h3>
-                        <p class="text-gray-600">Learn how to master your mindset for sustainable success.</p>
-                    </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Mindset Mastery</h3>
+                    <p class="text-gray-600">Learn how to master your mindset for sustainable success.</p>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Aligning Passion with Purpose</h3>
-                        <p class="text-gray-600">Steps to create a career that’s fulfilling and impactful through preneurship.</p>
-                    </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Aligning Passion with Purpose</h3>
+                    <p class="text-gray-600">Steps to create a career that’s fulfilling and impactful through preneurship.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
@@ -297,81 +315,105 @@
 
 
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<style>
+    html {
+        scroll-behavior: smooth; /* Smooth scrolling */
+    }
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    .contact-section {
+        padding: 60px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        background: #e6e6e6;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        border-radius: 12px;
+    }
+    .contact-section h2 {
+        text-align: center;
+        color: #7347cd;
+        margin-bottom: 20px;
+    }
+    .contact-section p {
+        text-align: center;
+        color: #555;
+        margin-bottom: 40px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    input, textarea {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    textarea {
+        padding: 12px;
+    }
+    button {
+        padding: 10px 25px; /* Smaller button */
+        background-color: #7347cd;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px; /* Smaller font */
+        cursor: pointer;
+        transition: background 0.3s;
+        width: auto;
+        align-self: center; /* Center the button */
+    }
+    button:hover {
+        background-color: #5a36a3;
+    }
+    @media (max-width: 500px) {
         .contact-section {
-            padding: 60px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border-radius: 12px;
+            padding: 40px 10px;
         }
-        .contact-section h2 {
-            text-align: center;
-            color: #7347cd;
-            margin-bottom: 20px;
-        }
-        .contact-section p {
-            text-align: center;
-            color: #555;
-            margin-bottom: 40px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        input, textarea {
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        button {
-            padding: 15px;
-            background-color: #7347cd;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background-color: #5a36a3;
-        }
-        @media (max-width: 500px) {
-            .contact-section {
-                padding: 40px 10px;
-            }
-        }
-    </style>
+    }
+    a {
+        color: #7347cd;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    a:hover {
+        color: #5a36a3;
+    }
+</style>
 </head>
 <body>
 
-<section class="contact-section">
-    <h2>Contact Us</h2>
+<!-- Example link -->
+<p style="text-align:center; margin:20px;">
+    <a href="#contact" class="hover:text-purple-600 transition duration-300">Contact Us</a>
+</p>
+
+<!-- Contact Section with id="contact" -->
+<section id="contact" class="contact-section">
+    <h2 class="text-3xl font-bold mb-6 text-purple-800">Get in Touch</h2>
+
     <p>Send us a message and we’ll get back to you as soon as possible!</p>
 
     <!-- Formspree Form -->
     <form action="https://formspree.io/f/xanpwdjb" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <input type="tel" name="phone" placeholder="Your Contact Number" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
     </form>
 </section>
@@ -382,38 +424,7 @@
 
 
 
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-6 text-purple-800">Get in Touch</h2>
-            <p class="mb-8 text-gray-600">Ready to start your journey? Reach out and let's create something beautiful together.</p>
-            <form class="max-w-xl mx-auto space-y-4">
-                <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg">
-                <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg">
-                <textarea placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
-                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-medium transition duration-300">Send Message</button>
-            </form>
-        </div>
-    </section>
-
+   
     <!-- Footer -->
     <footer class="bg-purple-800 text-white py-6 text-center">
         <p>&copy; 2025 Holisticpreneur. All rights reserved.</p>
