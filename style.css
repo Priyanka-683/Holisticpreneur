@@ -1657,3 +1657,40 @@ section + .approach-section {
         font-size: 0.95rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-bg-layer {
+    position: absolute;
+    inset: 0;
+    /* Image path ko aise likhein */
+    background-image: url('FOUNDER PRIYANKA C.jpg'); 
+    background-repeat: no-repeat;
+    
+    /* Mobile ke liye 'scroll' best hai, 'fixed' nahi */
+    background-attachment: scroll; 
+    
+    /* Yeh sabse zaroori hai mobile ke liye */
+    background-position: center center; 
+    background-size: cover; 
+    
+    filter: blur(8px) brightness(0.9);
+    z-index: -2;
+    
+    /* Browser compatibility ke liye */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
