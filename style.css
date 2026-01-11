@@ -1694,3 +1694,77 @@ section + .approach-section {
     -moz-background-size: cover;
     -o-background-size: cover;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Trust Footer (📜 ❤️ 📖) Section Fix --- */
+
+.trust-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 15px;
+    position: relative;
+    overflow: hidden;
+    
+    /* Background logic to stop stretching */
+    background-image: url('FOUNDER PRIYANKA C.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Desktop par perfect fit */
+    background-position: center 20%; /* Image ka focus upar rakhega */
+    background-attachment: scroll;
+    
+    border-radius: 20px;
+}
+
+/* Optional: Ek halka white overlay taaki text clear dikhe aur stretch kam mehsoos ho */
+.trust-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(251, 249, 255, 0.85); /* 85% light background tint */
+    z-index: 0;
+}
+
+.trust-card {
+    position: relative;
+    z-index: 1; /* Text ko background ke upar rakhne ke liye */
+    background: white; 
+    padding: 12px 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex: 1 1 280px; 
+    max-width: 380px;
+}
+
+/* --- Mobile Specific Fix for Stretching --- */
+@media (max-width: 768px) {
+    .trust-footer {
+        /* Mobile par 'cover' image ko stretch karta hai, isliye 'auto' ya fix size best hai */
+        background-size: 150% auto; 
+        background-position: center top; /* Photo ka top part dikhayega stretch kiye bina */
+        margin-top: 30px;
+        padding: 20px 10px;
+    }
+    
+    .trust-card {
+        flex: 1 1 100%; /* Mobile par cards full width le lenge */
+        max-width: 100%;
+    }
+}
