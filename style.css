@@ -1707,3 +1707,72 @@ section + .approach-section {
 
 
 
+
+
+
+
+
+
+/* --- Trust Footer Fix (Text Cutting Problem) --- */
+
+.trust-footer {
+    display: flex;
+    flex-wrap: wrap; /* Ye sabse zaroori hai: jagah kam hone par card niche bhej dega */
+    gap: 12px;
+    justify-content: center; /* Desktop par center rakhega */
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 15px; /* Side se thodi jagah taaki screen se na chipke */
+}
+
+.trust-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    
+    /* Desktop par size control karega */
+    flex: 0 1 auto; 
+    min-width: fit-content; 
+    
+    /* Text cut na ho isliye */
+    white-space: nowrap; 
+}
+
+.trust-card span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- Mobile Responsive (Yahan Fix Hoga) --- */
+@media (max-width: 768px) {
+    .trust-footer {
+        gap: 10px; /* Mobile par thoda kam gap */
+    }
+
+    .trust-card {
+        /* Mobile par cards ki width auto rakhein taaki text cut na ho */
+        flex: 1 1 calc(50% - 10px); /* 2 cards in one row (optional) */
+        min-width: 140px; 
+        padding: 8px 12px;
+        justify-content: flex-start;
+    }
+    
+    .trust-card span {
+        font-size: 0.85rem; /* Mobile par font halka chota taaki fit ho jaye */
+        white-space: normal; /* Agar phir bhi bada ho toh next line mein jaye, kate nahi */
+    }
+}
+
+@media (max-width: 480px) {
+    .trust-card {
+        flex: 1 1 100%; /* Bilkul chote phone par ek ke niche ek cards */
+        max-width: 100%;
+    }
+}
+
+
