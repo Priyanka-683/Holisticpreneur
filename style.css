@@ -1242,3 +1242,418 @@ button {
     .main-title { font-size: 3.5rem; }
     .cta-group { gap: 10px; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Five Pillars Section Responsive Design --- */
+
+.path-section {
+    padding: clamp(60px, 10vh, 100px) 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Group Styling */
+.header-group {
+    text-align: center;
+    max-width: 800px; /* Text ko bohot zyada phailne se rokne ke liye */
+    margin: 0 auto 50px auto;
+    padding: 0 15px;
+}
+
+/* Pill Badge Animation & Responsive Size */
+.pill-badge {
+    display: inline-block;
+    background: white;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: clamp(0.75rem, 2vw, 0.9rem); /* Mobile par thoda chota */
+    color: #6c5ce7;
+    font-weight: 700;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    animation: slow-zoom 4s infinite ease-in-out;
+}
+
+/* Title Styling with Clamp */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Screen size ke hisaab se font badlega */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+/* Sub-description styling */
+.section-desc {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: var(--text-gray);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Responsive Media Queries for this Section --- */
+
+@media (max-width: 768px) {
+    .path-section {
+        padding: 60px 15px; /* Mobile par padding thodi kam */
+    }
+
+    .header-group {
+        margin-bottom: 35px;
+    }
+    
+    .section-title {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pill-badge {
+        padding: 6px 18px;
+        letter-spacing: 0.5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Empathy & Experience Section --- */
+
+.empathy-section {
+    width: 100%;
+    padding: clamp(60px, 10vh, 100px) 20px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empathy-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Three Title Keywords */
+.empathy-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 3.8rem);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+/* Gradient Words */
+.empathy-title .highlight-text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* The Quote/Description Box */
+.empathy-description {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--text-gray);
+    line-height: 1.8;
+    font-weight: 500;
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
+}
+
+/* Responsive Logic */
+@media (max-width: 768px) {
+    .empathy-title {
+        display: flex;
+        flex-direction: column; /* Mobile par stack ho jayega */
+        gap: 5px;
+    }
+    
+    .empathy-description {
+        line-height: 1.6;
+        padding: 0 5px;
+    }
+}
+
+/* Optional: Adding a small separator or icon */
+.empathy-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--primary-gradient);
+    margin: 30px auto;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Approach Section (Reduced Spacing) --- */
+
+.approach-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Pehle 100px tha, ab sirf 40px - 60px hai */
+    padding: clamp(30px, 5vh, 50px) 20px; 
+}
+
+/* Isse sections ke beech ka extra gap khatam ho jayega */
+section + .approach-section {
+    margin-top: -20px; 
+}
+
+/* Header aur Content ke beech ka gap bhi kam kiya */
+.approach-header {
+    text-align: center;
+    margin-bottom: 25px; /* Pehle 50px tha */
+}
+
+.approach-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    margin-top: 10px; /* Badge ke niche ka gap kam */
+    color: var(--text-dark);
+}
+
+/* Content Layout */
+.approach-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Gap kam kiya taaki tight lage */
+    align-items: center;
+}
+
+.approach-left, .approach-right {
+    flex: 1 1 350px;
+}
+
+/* Premium Box ki inner padding bhi kam ki */
+.premium-quote-box {
+    background: var(--primary-gradient);
+    padding: 25px 30px; /* Thoda compact padding */
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(192, 88, 243, 0.2);
+}
+
+/* Feature Cards spacing */
+.approach-card {
+    background: white;
+    padding: 15px 20px; /* Andar ki spacing kam */
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px; /* Ek card ke baad doosre card ka gap kam */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .approach-section {
+        padding: 30px 15px; /* Mobile par aur bhi kam */
+    }
+    
+    .approach-flex {
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Final Journey / CTA Section --- */
+.journey-section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* Spacing ko upar/niche se tight kiya */
+    padding: clamp(40px, 7vh, 70px) 20px;
+    text-align: center;
+}
+
+.journey-container {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: clamp(30px, 5vw, 60px);
+    border: 1px solid rgba(192, 88, 243, 0.2);
+    box-shadow: 0 20px 50px rgba(108, 92, 231, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Soft Glow */
+.journey-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(192, 88, 243, 0.05) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.journey-badge {
+    display: inline-block;
+    background: #f3ebff;
+    color: #6c5ce7;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.journey-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    line-height: 1.1;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.journey-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-gray);
+    max-width: 700px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.btn-journey {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(192, 88, 243, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-journey:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(192, 88, 243, 0.5);
+    letter-spacing: 1px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .journey-section {
+        padding: 40px 15px;
+    }
+    
+    .journey-container {
+        padding: 40px 20px;
+        border-radius: 20px;
+    }
+
+    .btn-journey {
+        width: 100%; /* Mobile par full width button */
+        padding: 16px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.btn-main-cta, .btn-journey, .btn-primary {
+    /* 1. Width ko fix kiya */
+    width: fit-content; 
+    min-width: 200px; /* Bohot chota bhi na lage */
+    max-width: 90%;   /* Mobile screen se bahar na jaye */
+    
+    /* 2. Padding ko adjust kiya (Vertical 14px, Horizontal 30px) */
+    padding: 14px 30px; 
+    
+    /* 3. Alignment center karne ke liye (agar parent flex hai) */
+    margin: 10px auto; 
+    
+    /* 4. Text settings */
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Text ko ek hi line mein rakhega */
+    
+    /* Styling */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile responsive check */
+@media (max-width: 480px) {
+    .btn-main-cta, .btn-journey, .btn-primary {
+        min-width: 180px; 
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+}
