@@ -1707,64 +1707,77 @@ section + .approach-section {
 
 
 
-/* --- Trust Footer (📜 ❤️ 📖) Section Fix --- */
+/* --- TRUST CARDS SECTION (STRETCH FIX) --- */
 
 .trust-footer {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 50px;
+    gap: 12px;
     justify-content: center;
     width: 100%;
-    padding: 30px 15px;
+    margin-top: 40px;
+    padding: 20px 10px;
     position: relative;
-    overflow: hidden;
-    
-    /* Background logic to stop stretching */
-    background-image: url('FOUNDER PRIYANKA C.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; /* Desktop par perfect fit */
-    background-position: center 20%; /* Image ka focus upar rakhega */
-    background-attachment: scroll;
-    
-    border-radius: 20px;
+    /* Isse image stretch nahi hogi, content ke hisab se scroll hogi */
+    background: transparent; 
 }
 
-/* Optional: Ek halka white overlay taaki text clear dikhe aur stretch kam mehsoos ho */
-.trust-footer::before {
-    content: "";
+/* Background Image ko alag se handle karne ke liye */
+.hero-bg-layer {
     position: absolute;
-    inset: 0;
-    background: rgba(251, 249, 255, 0.85); /* 85% light background tint */
-    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Mobile par height ko stretch hone se rokne ke liye */
+    height: 100%; 
+    background-image: url('FOUNDER PRIYANKA C.jpg');
+    background-size: cover; /* Image ko proportional rakhega */
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* MOBILE STRETCH KILLER: Fixed attachment aksar mobile pe panga karta hai */
+    background-attachment: scroll; 
+    z-index: -1;
 }
 
 .trust-card {
-    position: relative;
-    z-index: 1; /* Text ko background ke upar rakhne ke liye */
-    background: white; 
-    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.9); /* Halka transparent white */
+    backdrop-filter: blur(5px);
+    padding: 12px 18px;
     border-radius: 15px;
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    /* Mobile flexibility */
     flex: 1 1 280px; 
-    max-width: 380px;
+    max-width: 350px;
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
-/* --- Mobile Specific Fix for Stretching --- */
+/* MOBILE VIEW FIX */
 @media (max-width: 768px) {
-    .trust-footer {
-        /* Mobile par 'cover' image ko stretch karta hai, isliye 'auto' ya fix size best hai */
-        background-size: 150% auto; 
-        background-position: center top; /* Photo ka top part dikhayega stretch kiye bina */
-        margin-top: 30px;
-        padding: 20px 10px;
+    .hero-wrapper {
+        height: auto; /* Fixed height hata kar auto kiya */
+        min-height: 100vh;
+        padding-bottom: 50px; /* Neeche thodi jagah */
     }
-    
+
+    .hero-bg-layer {
+        /* Mobile par image ko stretch hone se rokne ka RAMBAAN ilaj */
+        height: 110%; /* Thodi extra height taaki padding cover ho jaye */
+        background-size: cover;
+        background-position: 70% center; /* Focus founder ke face par rakhega */
+    }
+
+    .trust-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .trust-card {
-        flex: 1 1 100%; /* Mobile par cards full width le lenge */
+        width: 100%;
         max-width: 100%;
     }
 }
