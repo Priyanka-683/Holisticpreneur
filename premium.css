@@ -149,3 +149,60 @@ body { font-family: 'Outfit', sans-serif; background: var(--light-bg); color: va
         font-size: 0.85rem;
     }
 }
+
+
+
+
+
+
+
+
+
+/* --- Method Section --- */
+.method-section { padding: 100px 20px; background: #fff; }
+.method-steps-container { max-width: 1000px; margin: 60px auto; position: relative; }
+
+.method-step {
+    display: flex; align-items: center; gap: 80px; margin-bottom: 100px;
+}
+.method-step.reverse { flex-direction: row-reverse; }
+
+.step-info { flex: 1; text-align: left; }
+.method-step.reverse .step-info { text-align: right; }
+
+.step-digit {
+    font-size: 5rem; font-weight: 800; opacity: 0.1;
+    font-family: 'Playfair Display', serif; display: block; line-height: 1;
+}
+
+.step-info h3 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 15px; color: #2d3436; }
+.step-info p { font-size: 1.1rem; color: #636e72; line-height: 1.8; }
+
+/* Visual Elements */
+.step-visual { flex: 1; display: flex; justify-content: center; }
+.visual-circle {
+    width: 250px; height: 250px; border-radius: 50%;
+    filter: blur(40px); opacity: 0.4;
+}
+.purple-glow { background: #a29bfe; }
+.pink-glow { background: #fd79a8; }
+.violet-glow { background: #c058f3; }
+
+/* --- Philosophy Strip --- */
+.philosophy-strip {
+    padding: 120px 20px;
+    background: linear-gradient(rgba(108, 92, 231, 0.03), rgba(251, 88, 209, 0.03));
+    text-align: center;
+}
+.philosophy-content p {
+    font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-style: italic; max-width: 900px; margin: 0 auto 30px; color: #2d3436;
+}
+.founder-sig { text-transform: uppercase; letter-spacing: 3px; font-weight: 700; color: #c058f3; }
+
+/* --- Mobile Fix --- */
+@media (max-width: 900px) {
+    .method-step, .method-step.reverse { flex-direction: column; text-align: center !important; gap: 40px; }
+    .step-info { text-align: center !important; }
+    .visual-circle { width: 150px; height: 150px; }
+}
