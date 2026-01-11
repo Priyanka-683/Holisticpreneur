@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Discovery Form | Holistic Journey</title>
+    <link rel="stylesheet" href="premium-form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a href="index.html" class="back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back to Home</span>
+    </a>
+
+    <section class="ultra-form-section">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+
+        <div class="form-card">
+            <div class="form-sidebar">
+                <div class="sidebar-content">
+                    <span class="mini-tag">Transform your life</span>
+                    <h1 class="side-title">Let’s Start Your <br><i>New Chapter</i></h1>
+                    <p>Fill in your details, and let's craft a roadmap tailored only for you.</p>
+                    <div class="trust-pill">
+                        <span class="dot-live"></span> 12 Slots remaining this month
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-main">
+                <form id="ultraForm">
+                    <div class="input-row">
+                        <div class="input-field">
+                            <label>Your Name</label>
+                            <input type="text" name="name" placeholder="e.g. Rahul Sharma" required>
+                        </div>
+                    </div>
+
+                    <div class="input-row split">
+                        <div class="input-field">
+                            <label>WhatsApp Number</label>
+                            <input type="tel" name="whatsapp" placeholder="+91 00000 00000" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Email Address</label>
+                            <input type="email" name="email" placeholder="name@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="selection-area">
+                        <label class="section-label">Select your focus area <span>(Pick one or more)</span></label>
+                        <input type="hidden" name="focus_areas" id="selectedAreasInput">
+                        
+                        <div class="bento-options">
+                            <div class="bento-item" data-value="Physical"><span class="b-emoji">🍎</span> <span class="b-text">Physical</span></div>
+                            <div class="bento-item" data-value="Emotional"><span class="b-emoji">💖</span> <span class="b-text">Emotional</span></div>
+                            <div class="bento-item" data-value="Mental"><span class="b-emoji">🧠</span> <span class="b-text">Mental</span></div>
+                            <div class="bento-item" data-value="Spiritual"><span class="b-emoji">✨</span> <span class="b-text">Spiritual</span></div>
+                            <div class="bento-item" data-value="Social"><span class="b-emoji">🤝</span> <span class="b-text">Social</span></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="prime-btn" id="submitBtn">
+                        Confirm My Discovery Session <span>→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay" id="successOverlay">
+        <div class="success-modal">
+            <div class="confetti-icon">🎊</div>
+            <h2>Congratulations!</h2>
+            <p>Your discovery session is booked. Get ready to start your journey towards wholeness. We will reach out to you on WhatsApp soon.</p>
+            <button class="close-btn" onclick="window.location.href='index.html'">Return to Home</button>
+        </div>
+    </div>
+
+    <script src="premium-form.js"></script>
+</body>
+</html>

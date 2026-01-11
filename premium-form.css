@@ -1,0 +1,94 @@
+:root {
+    --p-dark: #1e272e;
+    --p-violet: #6c5ce7;
+    --p-glass: rgba(255, 255, 255, 0.85);
+    --physical: #55efc4; --emotional: #ff7675; --mental: #74b9ff; --spiritual: #a29bfe; --social: #fdcb6e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f4f6fb; font-family: 'Outfit', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow-x: hidden; }
+
+/* Background Decoration */
+.orb { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.5; animation: float 10s infinite alternate; }
+.orb-1 { width: 400px; height: 400px; background: #a29bfe; top: -10%; left: -5%; }
+.orb-2 { width: 350px; height: 350px; background: #fab1a0; bottom: -5%; right: -5%; }
+@keyframes float { from { transform: translate(0, 0); } to { transform: translate(30px, 50px); } }
+
+/* Main Card */
+.form-card { display: flex; max-width: 1100px; width: 95%; background: var(--p-glass); backdrop-filter: blur(30px); border-radius: 40px; border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 50px 100px rgba(0,0,0,0.06); overflow: hidden; }
+
+.form-sidebar { flex: 0.7; background: var(--p-dark); color: white; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+.side-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; line-height: 1.1; margin: 20px 0; }
+.side-title i { color: var(--spiritual); font-weight: 400; }
+.mini-tag { color: var(--spiritual); text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; }
+.trust-pill { background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; margin-top: 30px; display: inline-flex; align-items: center; gap: 10px; }
+.dot-live { width: 8px; height: 8px; background: #55efc4; border-radius: 50%; box-shadow: 0 0 10px #55efc4; }
+
+.form-main { flex: 1.3; padding: 60px; background: white; }
+.input-row { margin-bottom: 25px; }
+.input-row.split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.input-field { display: flex; flex-direction: column; gap: 8px; }
+.input-field label { font-weight: 600; font-size: 0.85rem; color: #4b4b4b; text-transform: uppercase; }
+.input-field input { padding: 16px; border-radius: 12px; border: 1.5px solid #f0f0f0; background: #f9f9f9; outline: none; transition: 0.3s; font-size: 1rem; }
+.input-field input:focus { border-color: var(--p-violet); background: white; }
+
+/* Area Selection */
+.section-label { font-weight: 700; margin-bottom: 20px; display: block; }
+.bento-options { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+.bento-item { padding: 12px 22px; border: 1.5px solid #f0f0f0; border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: white; }
+
+.bento-item[data-value="Physical"].selected { background: var(--physical); border-color: var(--physical); color: white; }
+.bento-item[data-value="Emotional"].selected { background: var(--emotional); border-color: var(--emotional); color: white; }
+.bento-item[data-value="Mental"].selected { background: var(--mental); border-color: var(--mental); color: white; }
+.bento-item[data-value="Spiritual"].selected { background: var(--spiritual); border-color: var(--spiritual); color: white; }
+.bento-item[data-value="Social"].selected { background: var(--social); border-color: var(--social); color: white; }
+
+.prime-btn { width: 100%; padding: 20px; border-radius: 18px; border: none; background: var(--p-dark); color: white; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: 0.4s; }
+.prime-btn:hover { background: var(--p-violet); transform: translateY(-3px); }
+
+/* Pop-up Overlay */
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 1000; }
+.success-modal { background: white; padding: 50px; border-radius: 30px; text-align: center; max-width: 450px; width: 90%; animation: popIn 0.5s ease; }
+@keyframes popIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+.confetti-icon { font-size: 4rem; margin-bottom: 20px; }
+.close-btn { background: var(--p-violet); color: white; border: none; padding: 15px 35px; border-radius: 50px; cursor: pointer; margin-top: 20px; }
+
+@media (max-width: 950px) { .form-card { flex-direction: column; } .input-row.split { grid-template-columns: 1fr; } }
+
+
+
+
+/* Back Button Styling */
+.back-btn {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--p-dark);
+    font-weight: 600;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: var(--p-dark);
+    color: white;
+    transform: translateX(-5px);
+}
+
+@media (max-width: 900px) {
+    .back-btn {
+        top: 15px;
+        left: 15px;
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}
