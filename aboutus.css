@@ -1,0 +1,141 @@
+:root {
+    --purple: #e317e3;
+    --black: #0d0d0d;
+    --gray-text: #555;
+    --light-bg: #fdfdff;
+}
+
+body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: var(--black); line-height: 1.8; overflow-x: hidden; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.purple-tag { color: var(--purple); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; display: block; margin-bottom: 20px; }
+
+/* HERO SPLIT WITH ANIMATION */
+.hero-split { display: flex; height: 100vh; align-items: center; background: #fff; }
+.hero-content-box { flex: 1.2; padding: 0 8%; }
+.hero-content-box h1 { font-family: 'Playfair Display'; font-size: 5rem; line-height: 1.1; margin-bottom: 25px; }
+.italic-purple { color: var(--purple); font-style: italic; }
+.hero-content-box p { font-size: 1.3rem; color: var(--gray-text); max-width: 500px; font-weight: 300; }
+
+.hero-visual { flex: 1; height: 100%; position: relative; overflow: hidden; }
+.hero-visual img { width: 100%; height: 100%; object-fit: cover; animation: slowZoom 20s infinite alternate linear; }
+@keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.15); } }
+.visual-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(227, 23, 227, 0.05)); z-index: 1; }
+
+/* PHILOSOPHY */
+.deep-philosophy { padding: 140px 0; border-bottom: 1px solid #eee; }
+.philosophy-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; }
+.phi-title h2 { font-family: 'Playfair Display'; font-size: 3.5rem; line-height: 1.1; }
+
+/* PILLARS 3+2 */
+.pillars-section { padding: 120px 0; background: var(--light-bg); text-align: center; }
+.pillar-row { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 50px; }
+.pillar-card-new {
+    background: #fff; padding: 60px 40px; width: 320px; border-radius: 30px; text-align: left;
+    transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1); box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+}
+.pillar-card-new:hover { transform: translateY(-15px); box-shadow: 0 30px 60px rgba(227, 23, 227, 0.15); }
+.card-num { font-weight: 800; color: var(--purple); margin-bottom: 20px; }
+.pillar-card-new h4 { font-size: 1.6rem; margin-bottom: 15px; font-family: 'Playfair Display'; }
+
+/* JOURNEY PROCESS */
+.transformation-journey { padding: 140px 0; background: #fff; text-align: center; }
+.journey-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px; }
+.step-box { padding: 50px 40px; background: #fafafa; border-radius: 24px; text-align: left; transition: 0.3s; }
+.step-box:hover { background: #f4f4f4; }
+.step-box h3 { font-family: 'Playfair Display'; font-size: 1.4rem; color: var(--purple); margin-bottom: 15px; }
+
+/* ENERGY PORTAL */
+.energy-portal-v3 { position: relative; height: 80vh; background: #000; color: #fff; display: flex; align-items: center; overflow: hidden; }
+.portal-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&fit=crop&w=1920&q=80') center/cover; opacity: 0.3; }
+.portal-text { position: relative; z-index: 2; text-align: center; width: 100%; }
+.play-glow-btn { width: 85px; height: 85px; border: 1px solid var(--purple); border-radius: 50%; margin: 40px auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px var(--purple); cursor: pointer; }
+
+/* FINAL CTA */
+.final-evolution { padding: 140px 0; text-align: center; }
+.evolution-card { background: var(--black); color: #fff; padding: 100px 50px; border-radius: 50px; max-width: 1000px; margin: 0 auto; }
+.evolution-card h2 { font-family: 'Playfair Display'; font-size: 4rem; line-height: 1; margin-bottom: 25px; }
+.evolution-card h2 span { color: var(--purple); }
+.cta-premium-btn { display: inline-block; padding: 20px 55px; background: var(--purple); color: #fff; text-decoration: none; border-radius: 100px; font-weight: 700; transition: 0.4s; }
+.cta-premium-btn:hover { background: #fff; color: var(--purple); }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .hero-split { flex-direction: column; height: auto; text-align: center; }
+    .hero-content-box { padding: 80px 20px; }
+    .hero-visual { height: 450px; width: 100%; }
+    .hero-content-box h1 { font-size: 3rem; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ENERGY PORTAL V3 - ROTATING DESIGN */
+.energy-portal-v3 { 
+    position: relative; 
+    height: 85vh; 
+    background: #000; 
+    color: #fff; 
+    display: flex; 
+    align-items: center; 
+    text-align: center; 
+    overflow: hidden;
+}
+
+.energy-vortex-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* THE ROTATING CIRCLE */
+.rotating-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed var(--purple); /* Dashed line se rotation zyada visible hoti hai */
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(227, 23, 227, 0.4);
+    
+    /* Animation: 10 seconds mein ek chakkar, continuous */
+    animation: rotateVortex 10s linear infinite;
+}
+
+/* Play/Inner Icon remains steady */
+.play-inner-icon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+    margin-left: 5px;
+    z-index: 2;
+}
+
+/* ROTATION KEYFRAMES */
+@keyframes rotateVortex {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Glow Effect on Hover */
+.energy-vortex-container:hover .rotating-circle {
+    border-style: solid; /* Hover par line solid ho jayegi */
+    box-shadow: 0 0 50px var(--purple);
+    transition: 0.3s;
+}
