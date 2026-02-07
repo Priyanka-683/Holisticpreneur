@@ -92,3 +92,83 @@ body { background: #f4f6fb; font-family: 'Outfit', sans-serif; min-height: 100vh
         font-size: 0.8rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* POPUP MASTER STYLE */
+.enrollment-popup {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 30px !important;
+    background: #ffffff !important;
+    padding: 12px 20px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.15) !important;
+    display: flex !important;
+    align-items: center !important;
+    z-index: 2147483647 !important; /* Highest possible z-index */
+    border: 1px solid #f0f0f0 !important;
+    font-family: 'Outfit', sans-serif !important;
+    
+    /* Animation - Start state */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Active State - When shown */
+.enrollment-popup.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.popup-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+    background: #cf37c8; /* Your Brand Purple */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.popup-text p {
+    margin: 0 !important;
+    font-size: 0.95rem !important;
+    color: #333 !important;
+    line-height: 1.4 !important;
+}
+
+.popup-text strong {
+    color: #cf37c8 !important;
+}
+
+.popup-tag {
+    font-size: 0.75rem;
+    color: #2ecc71; /* Green for verified */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

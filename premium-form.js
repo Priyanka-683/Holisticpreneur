@@ -47,3 +47,50 @@ document.addEventListener('DOMContentLoaded', () => {
 function closePopup() {
     document.getElementById('successOverlay').style.display = 'none';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const names = ["Rahul", "Pooja", "Amit", "Sneha", "Vikram", "Anjali", "Suresh", "Neha", "Arjun", "Kiran"];
+    const cities = ["Mumbai", "Delhi", "Bangalore", "Pune", "Ahmedabad", "Lucknow", "Jaipur"];
+    
+    const popup = document.getElementById('enrollment-popup');
+    const message = document.getElementById('popup-message');
+    const initial = document.getElementById('popup-initial');
+
+    function triggerNotification() {
+        // Random Selection
+        const randomName = names[Math.floor(Math.random() * names.length)];
+        const randomCity = cities[Math.floor(Math.random() * cities.length)];
+
+        // Update UI
+        initial.innerText = randomName.charAt(0);
+        message.innerHTML = `<strong>${randomName}</strong> from ${randomCity} enrolled yesterday`;
+
+        // Show Popup
+        popup.classList.add('active');
+        console.log("Popup is now active!");
+
+        // Hide after 6 seconds
+        setTimeout(() => {
+            popup.classList.remove('active');
+        }, 6000);
+    }
+
+    // First appearance after 3 seconds
+    setTimeout(triggerNotification, 3000);
+
+    // Repeat every 25 seconds
+    setInterval(triggerNotification, 25000);
+});
