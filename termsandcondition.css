@@ -1,0 +1,150 @@
+body {
+    background-color: #fcfdfd;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.policy-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 50px;
+    background: #fff;
+    box-shadow: 0 10px 60px rgba(227, 23, 227, 0.05);
+    border-radius: 15px;
+}
+
+.policy-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.policy-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    color: #e317e3;
+    margin-bottom: 10px;
+}
+
+.header-line {
+    width: 80px;
+    height: 4px;
+    background: #e317e3;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 60px;
+}
+
+/* Sidebar Nav */
+.policy-nav {
+    position: sticky;
+    top: 30px;
+    height: fit-content;
+    padding-right: 20px;
+    border-right: 1px solid #f0f4f4;
+}
+
+.nav-title {
+    font-weight: 600;
+    color: #e317e3;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.policy-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.policy-nav li {
+    margin-bottom: 12px;
+}
+
+.policy-nav a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.policy-nav a:hover {
+    color: #e317e3;
+    padding-left: 5px;
+}
+
+/* Content Text */
+.policy-text h2 {
+    color: #e317e3;
+    margin-top: 50px;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #f9ebf9;
+    padding-bottom: 10px;
+}
+
+.policy-text p {
+    color: #4a5568;
+    line-height: 1.9;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.detail-list {
+    background: #fdf2fd;
+    padding: 25px 40px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.detail-list li {
+    margin-bottom: 15px;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Cancellation Box */
+.special-box {
+    background: #fff;
+    border: 2px solid #e317e3;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 0px #fdf2fd;
+}
+
+.policy-footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid #f0f4f4;
+    text-align: center;
+}
+
+.btn-home {
+    display: inline-block;
+    padding: 18px 45px;
+    background: #e317e3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(227, 23, 227, 0.2);
+}
+
+.btn-home:hover {
+    background: #c214c2;
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .policy-grid { grid-template-columns: 1fr; }
+    .policy-nav { display: none; }
+    .policy-wrapper { padding: 30px; margin: 20px; }
+    .policy-header h1 { font-size: 2.5rem; }
+}
