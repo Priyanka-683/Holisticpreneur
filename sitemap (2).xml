@@ -9,32 +9,37 @@
 
 <url>
   <loc>https://holisticpreneur.vercel.app/</loc>
-  <lastmod>2026-02-07T07:44:33+00:00</lastmod>
+  <lastmod>2026-02-07T11:47:27+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://holisticpreneur.vercel.app/premium-form.html</loc>
-  <lastmod>2026-02-07T07:44:34+00:00</lastmod>
+  <lastmod>2026-02-07T11:47:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://holisticpreneur.vercel.app/premium.html</loc>
-  <lastmod>2026-02-07T07:44:34+00:00</lastmod>
+  <lastmod>2026-02-07T11:47:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://holisticpreneur.vercel.app/aboutus.html</loc>
+  <lastmod>2026-02-07T11:47:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://holisticpreneur.vercel.app/privacypolicy.html</loc>
-  <lastmod>2026-02-07T07:44:34+00:00</lastmod>
+  <lastmod>2026-02-07T11:47:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://holisticpreneur.vercel.app/termsand%20condition.html</loc>
-  <lastmod>2026-02-07T07:44:34+00:00</lastmod>
+  <lastmod>2026-02-07T11:47:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  https://holisticpreneur.vercel.app/sitemap.xml
-  <lastmod>2026-02-07T07:44:35+00:00</lastmod>
+  <loc>https://holisticpreneur.vercel.app/index.html</loc>
+  <lastmod>2026-02-07T11:47:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
