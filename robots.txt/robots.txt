@@ -1,4 +1,6 @@
+# User-agent: * applies to all search engines (Google, Bing, etc.)
 User-agent: *
 Allow: /
 
+# Direct search engines to your sitemap
 Sitemap: https://holisticpreneur.vercel.app/sitemap.xml
